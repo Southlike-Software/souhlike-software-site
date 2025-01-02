@@ -1,22 +1,47 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Southlike Software</title>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+		<style>
+			.hover-light {
+				position: fixed;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 500px;
+				height: 300px;
+				pointer-events: none;
+				opacity: 0;
+				background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+				transition: opacity 0.5s ease;
+				z-index: 1000;
+			}
+
+			:global(button:hover) ~ .hover-light {
+				opacity: 1;
+				animation: pulseLight 2s ease-in-out infinite;
+			}
+
+			@keyframes pulseLight {
+				0% {
+					opacity: 0.3;
+				}
+				50% {
+					opacity: 0.7;
+				}
+				100% {
+					opacity: 0.3;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<slot />
+		<div class="hover-light"></div>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
