@@ -1,168 +1,287 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import logo from "../assets/southlike-logo.svg";
-import background from '../assets/pattern.svg';
+import background from "../assets/pattern.svg";
 ---
 
 <Layout>
-	<body class="bg-gray-950 text-slate-100 font-sans">
-		<header class="fixed w-full bg-opacity-90 backdrop-blur-sm z-50">
-			<nav class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
-				<a href="#home" class="flex items-center">
-					<img src={logo.src} width="40" height="40" alt="Southlike Software logo" class="mr-3 invert" />
-					<div class="hidden md:block text-xl md:text-2xl font-bold text-white">Southlike Software</div>
-				</a>
-				<ul class="flex space-x-6 mt-4 md:mt-0">
-					<li><a href="#home" class="text-sm md:text-base text-slate-100 hover:text-[#175726] transition-colors duration-300">Home</a></li>
-					<li><a href="#features" class="text-sm md:text-base text-slate-100 hover:text-[#175726] transition-colors duration-300">Features</a></li>
-					<li><a href="#contact" class="text-sm md:text-base text-slate-100 hover:text-[#175726] transition-colors duration-300">Contact</a></li>
-				</ul>
-			</nav>
-		</header>
-	
-		<main>
-			<section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-950 px-4">
-				<img 
-					src={background.src} 
-					alt="Background pattern" 
-					class="absolute inset-0 w-full h-full object-cover opacity-50"
-				/>
-				<div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-950 pointer-events-none"></div>
-				<div class="text-center relative z-10">
-					<h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 text-white animate-fade-in">Southlike Software</h1>
-					<p class="text-xl sm:text-2xl md:text-3xl text-slate-400 mb-8 animate-slide-up px-4">World Class Systems</p>
-					<a href="#contact" class="inline-block px-6 sm:px-8 py-3 font-bold text-white rounded-full bg-gray-950 relative overflow-hidden group">
-						<span class="relative z-10">Get Started</span>
-						<span class="absolute inset-0 overflow-hidden rounded-full">
-							<span class="absolute inset-0 rounded-full bg-gradient-to-r from-[#175726] to-[#2a8f3f] animate-gradient-x"></span>
-						</span>
-						<span class="absolute inset-0 rounded-full bg-gray-950 transition-all duration-300 group-hover:scale-[0.96]"></span>
-					</a>
-				</div>
-				<div class="absolute bottom-8 animate-bounce z-10">
-					<img src={logo.src} width="30" height="30" alt="Southlike Software logo" class="mr-3 invert" />
-				</div>
-			</section>
-	
-			<section id="features" class="py-12 md:py-20 bg-gray-900">
-				<div class="container mx-auto px-4 md:px-6">
-					<h2 class="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center text-white">Our Expertise</h2>
-					<div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-						<div class="bg-gray-800 p-4 md:p-6 rounded-lg transform hover:scale-105 transition-transform duration-300">
-							<h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">Custom Software Development</h3>
-							<p class="text-sm md:text-base text-slate-300">We transform your vision into reality with robust, scalable software solutions. Our expert team crafts high-performance bespoke applications, using cutting-edge technologies and best practices.</p>
-						</div>
-						<div class="bg-gray-800 p-4 md:p-6 rounded-lg transform hover:scale-105 transition-transform duration-300">
-							<h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">MVP Development & Design Consulting</h3>
-							<p class="text-sm md:text-base text-slate-300">From ideation to implementation, launch your product in weeks with our MVP development stack. Put your idea to market with intuitive user experiences and a solid and scalable foundation. Our consulting services ensure your project starts with the right architecture and technology choices.</p>
-						</div>
-						<div class="bg-gray-800 p-4 md:p-6 rounded-lg transform hover:scale-105 transition-transform duration-300">
-							<h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">AI Automation Pipelines</h3>
-							<p class="text-sm md:text-base text-slate-300">Harness the power of AI to automate your workflows. We design and implement intelligent automation solutions that reduce manual tasks, improve accuracy, and scale your operations. From data processing to decision-making systems, we build AI pipelines that deliver real business value.</p>
-						</div>
-					</div>
-				</div>
-			</section>
-	
-			<section id="contact" class="py-12 md:py-20 bg-gray-950">
-				<div class="container mx-auto px-4 md:px-6">
-					<h2 class="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center text-white">Get In Touch</h2>
-					<div class="max-w-lg mx-auto rounded-lg border border-slate-800 bg-slate-900/50 backdrop-blur-sm shadow-xl">
-						<form class="p-4 md:p-6 space-y-4 md:space-y-6">
-							<div class="space-y-2">
-								<label 
-									for="name" 
-									class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-slate-300"
-								>
-									Name
-								</label>
-								<input 
-									type="text" 
-									id="name" 
-									name="name" 
-									class="flex h-10 w-full rounded-md border border-slate-700 bg-transparent px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-900 disabled:cursor-not-allowed disabled:opacity-50 text-slate-50"
-									placeholder="John Doe"
-									required
-								/>
-							</div>
-							<div class="space-y-2">
-								<label 
-									for="email" 
-									class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-slate-300"
-								>
-									Email
-								</label>
-								<input 
-									type="email" 
-									id="email" 
-									name="email" 
-									class="flex h-10 w-full rounded-md border border-slate-700 bg-transparent px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-900 disabled:cursor-not-allowed disabled:opacity-50 text-slate-50"
-									placeholder="e. g. john.doe@example.com"
-									required
-								/>
-							</div>
-							<div class="space-y-2">
-								<label 
-									for="message" 
-									class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-slate-300"
-								>
-									Message
-								</label>
-								<textarea 
-									id="message" 
-									name="message" 
-									rows="4" 
-									class="flex w-full rounded-md border border-slate-700 bg-transparent px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-900 disabled:cursor-not-allowed disabled:opacity-50 text-slate-50"
-									placeholder="I want to integrate AI with my business and..."
-									required
-								></textarea>
-							</div>
-							<button type="submit" class="w-full px-6 md:px-8 py-2.5 md:py-3 text-sm md:text-base font-bold text-white rounded-full bg-gray-950 relative overflow-hidden group">
-								<span class="relative z-10">Send Message</span>
-								<span class="absolute inset-0 overflow-hidden rounded-full">
-									<span class="absolute inset-0 rounded-full bg-gradient-to-r from-[#175726] to-[#2a8f3f] animate-gradient-x"></span>
-								</span>
-								<span class="absolute inset-0 rounded-full bg-gray-950 transition-all duration-300 group-hover:scale-[0.96]"></span>
-							</button>
-						</form>
-					</div>
-				</div>
-			</section>
-		</main>
-	
-		<footer class="bg-gray-900 py-6 md:py-8">
-			<div class="container mx-auto px-4 md:px-6 text-center text-slate-300 text-sm md:text-base">
-				<p>&copy; 2023 Southlike Software. All rights reserved.</p>
-			</div>
-		</footer>
-	</body>
+  <body class="bg-gray-950 text-slate-100 font-sans">
+    <header class="fixed w-full bg-opacity-90 backdrop-blur-sm z-50">
+      <nav
+        class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center"
+      >
+        <a href="#home" class="flex items-center">
+          <img
+            src={logo.src}
+            width="40"
+            height="40"
+            alt="Southlike Software logo"
+            class="mr-3 invert"
+          />
+          <div class="hidden md:block text-xl md:text-2xl font-bold text-white">
+            Southlike Software
+          </div>
+        </a>
+        <ul class="flex space-x-6 mt-4 md:mt-0">
+          <li>
+            <a
+              href="#home"
+              class="text-sm md:text-base text-slate-100 hover:text-[#175726] transition-colors duration-300"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#features"
+              class="text-sm md:text-base text-slate-100 hover:text-[#175726] transition-colors duration-300"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="text-sm md:text-base text-slate-100 hover:text-[#175726] transition-colors duration-300"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        id="home"
+        class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-950 px-4"
+      >
+        <img
+          src={background.src}
+          alt="Background pattern"
+          class="absolute inset-0 w-full h-full object-cover opacity-50"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-950 pointer-events-none"
+        >
+        </div>
+        <div class="text-center relative z-10">
+          <h1
+            class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 text-white animate-fade-in"
+          >
+            Southlike Software
+          </h1>
+          <p
+            class="text-xl sm:text-2xl md:text-3xl text-slate-400 mb-8 animate-slide-up px-4"
+          >
+            World Class Systems
+          </p>
+          <a
+            href="#contact"
+            class="inline-block px-6 sm:px-8 py-3 font-bold text-white rounded-full bg-gray-950 relative overflow-hidden group"
+          >
+            <span class="relative z-10">Get Started</span>
+            <span class="absolute inset-0 overflow-hidden rounded-full">
+              <span
+                class="absolute inset-0 rounded-full bg-gradient-to-r from-[#175726] to-[#2a8f3f] animate-gradient-x"
+              ></span>
+            </span>
+            <span
+              class="absolute inset-0 rounded-full bg-gray-950 transition-all duration-300 group-hover:scale-[0.96]"
+            ></span>
+          </a>
+        </div>
+        <div class="absolute bottom-8 animate-bounce z-10">
+          <img
+            src={logo.src}
+            width="30"
+            height="30"
+            alt="Southlike Software logo"
+            class="mr-3 invert"
+          />
+        </div>
+      </section>
+
+      <section id="features" class="py-12 md:py-20 bg-gray-900">
+        <div class="container mx-auto px-4 md:px-6">
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center text-white"
+          >
+            Our Expertise
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div
+              class="bg-gray-800 p-4 md:p-6 rounded-lg transform hover:scale-105 transition-transform duration-300"
+            >
+              <h3
+                class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white"
+              >
+                Custom Software Development
+              </h3>
+              <p class="text-sm md:text-base text-slate-300">
+                We transform your vision into reality with robust, scalable
+                software solutions. Our expert team crafts high-performance
+                bespoke applications, using cutting-edge technologies and best
+                practices.
+              </p>
+            </div>
+            <div
+              class="bg-gray-800 p-4 md:p-6 rounded-lg transform hover:scale-105 transition-transform duration-300"
+            >
+              <h3
+                class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white"
+              >
+                MVP Development & Design Consulting
+              </h3>
+              <p class="text-sm md:text-base text-slate-300">
+                From ideation to implementation, launch your product in weeks
+                with our MVP development stack. Put your idea to market with
+                intuitive user experiences and a solid and scalable foundation.
+                Our consulting services ensure your project starts with the
+                right architecture and technology choices.
+              </p>
+            </div>
+            <div
+              class="bg-gray-800 p-4 md:p-6 rounded-lg transform hover:scale-105 transition-transform duration-300"
+            >
+              <h3
+                class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white"
+              >
+                AI Automation Pipelines
+              </h3>
+              <p class="text-sm md:text-base text-slate-300">
+                Harness the power of AI to automate your workflows. We design
+                and implement intelligent automation solutions that reduce
+                manual tasks, improve accuracy, and scale your operations. From
+                data processing to decision-making systems, we build AI
+                pipelines that deliver real business value.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-12 md:py-20 bg-gray-950">
+        <div class="container mx-auto px-4 md:px-6">
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center text-white"
+          >
+            Get In Touch
+          </h2>
+          <p class="text-center text-slate-300 mb-8">
+            Send us an email at <a href="mailto:admin@southlikesoftware.com" class="hover:text-[#2a8f3f] transition-colors duration-300">admin@southlikesoftware.com</a>
+          </p>
+          <p class="text-center text-slate-300 mb-8">
+            or schedule a meeting below:
+          </p>
+          <div
+            class="max-w-4xl mx-auto rounded-lg border border-slate-800 bg-slate-900/50 backdrop-blur-sm shadow-xl"
+          >
+            <div
+              style="width:100%;height:100%;overflow:scroll"
+              id="my-cal-inline"
+            >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-900 py-6 md:py-8">
+      <div
+        class="container mx-auto px-4 md:px-6 text-center text-slate-300 text-sm md:text-base"
+      >
+        <p>&copy; 2023 Southlike Software. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </Layout>
 
+<script type="text/javascript">
+  (function (C, A, L) {
+    let p = function (a, ar) {
+      a.q.push(ar);
+    };
+    let d = C.document;
+    C.Cal =
+      C.Cal ||
+      function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () {
+            p(api, arguments);
+          };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+  })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "30min", { origin: "https://cal.com" });
+
+  Cal.ns["30min"]("inline", {
+    elementOrSelector: "#my-cal-inline",
+    config: { layout: "month_view", theme: "dark" },
+    calLink: "southlike-software/30min",
+  });
+
+  Cal.ns["30min"]("ui", {
+    theme: "dark",
+    cssVarsPerTheme: { light: { "cal-brand": "#090e1c" } },
+    hideEventTypeDetails: false,
+    layout: "month_view",
+  });
+</script>
+
 <style>
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
     }
+    to {
+      opacity: 1;
+    }
+  }
 
-    @keyframes slideUp {
-        from { transform: translateY(20px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
     }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
-    .animate-fade-in {
-        animation: fadeIn 1s ease-out;
-    }
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
 
-    .animate-slide-up {
-        animation: slideUp 0.8s ease-out;
-    }
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
 
-    @keyframes spin-slow {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+  @keyframes spin-slow {
+    0% {
+      transform: rotate(0deg);
     }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
-    .animate-spin-slow {
-        animation: spin-slow 4s linear infinite;
-    }
+  .animate-spin-slow {
+    animation: spin-slow 4s linear infinite;
+  }
 </style>
