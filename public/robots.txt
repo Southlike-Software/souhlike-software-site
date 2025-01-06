@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://southlikesoftware.com/sitemap-index.xml

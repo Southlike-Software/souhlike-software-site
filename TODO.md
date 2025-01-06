@@ -1,11 +1,11 @@
-- [] backend for contact form
+- [x] backend for contact form
 - [] blog section
 - [] portfolio section
 - [] testimonials section
-- [] site map
+- [x] site map
 - [] improve SEO
 - [] improve accessibility
 - [] I18n
 - [] pipeline
-- [] buy domain
-- [] deploy
+- [x] buy domain
+- [x] deploy
