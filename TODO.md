@@ -6,6 +6,5 @@
 - [] improve SEO
 - [] improve accessibility
 - [] I18n
-- [] pipeline
 - [x] buy domain
 - [x] deploy
